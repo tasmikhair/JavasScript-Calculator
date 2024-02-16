@@ -43,10 +43,18 @@ function addToCalculationn(input) {
         ans = 0;
         prevChar = '+';
     }
+    else if(input === 'clear'){
+        document.querySelector('.input-box').innerHTML = '';
+        document.querySelector('.result').innerHTML = '';
+        string = '';
+        number = '';
+        ans = 0;
+        prevChar = '+';
+    }
     else {
         number += input;
     }
-    if (input !== '=') {
+    if (input !== '=' && input !== 'clear') {
         string += input;
         document.querySelector('.input-box').innerHTML = string;
         console.log(document.querySelector('.input-box').innerHTML);
